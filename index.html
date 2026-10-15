@@ -1,179 +1,96 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080b14">
-  <meta name="description" content="SKC InfoPoint — a curated directory of useful official websites, learning resources, career portals and digital services.">
-  <title>SKC InfoPoint — Useful links. Clear answers.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1266d5">
+  <meta name="description" content="SKC InfoPoint पर सरकारी नौकरी, रिजल्ट, एडमिट कार्ड, प्रवेश और सरकारी योजनाओं के आधिकारिक लिंक खोजें।">
+  <title>SKC InfoPoint — ऑनलाइन अपडेट</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="SKC InfoPoint home">
-      <span class="brand-mark">SKC<span>.</span></span>
-      <span class="brand-name">InfoPoint</span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#explore">Explore</a><a href="#featured">Featured links</a><a href="#about">About</a>
-      <a class="nav-cta" href="#explore">Find a link <span aria-hidden="true">↗</span></a>
-    </nav>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button class="menu-toggle" id="menuToggle" aria-label="मेन्यू खोलें" aria-expanded="false">☰</button>
+      <a class="brand" href="./" aria-label="SKC InfoPoint होम">
+        <span class="brand-mark">SKC</span>
+        <span class="brand-copy"><strong>SKC InfoPoint</strong><small>हर अपडेट, सही जानकारी</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#latest">लेटेस्ट अपडेट</a>
+        <a href="#jobs">सरकारी नौकरी</a>
+        <a href="#results">रिजल्ट</a>
+        <a href="#schemes">सरकारी योजना</a>
+      </nav>
+      <a class="telegram-button" href="https://telegram.org/" target="_blank" rel="noopener noreferrer">✈ Telegram</a>
+    </div>
   </header>
 
-  <main id="home">
+  <main class="container">
     <section class="hero">
-      <div class="eyebrow"><span class="live-dot"></span> YOUR EVERYDAY WEB DIRECTORY</div>
-      <h1>Useful links.<br><span class="gradient-text">Clear answers.</span></h1>
-      <p class="hero-copy">Discover trusted starting points for education, government services, careers, technology and everyday online tasks — all in one place.</p>
-      <form class="search-wrap" id="searchForm" role="search">
-        <span class="search-icon" aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" placeholder="Search links, topics or categories…" autocomplete="off" aria-label="Search links">
-        <button type="submit" class="search-button">Search <span aria-hidden="true">↗</span></button>
+      <p class="eyebrow">WELCOME TO SKC INFOPOINT</p>
+      <h1>ऑनलाइन अपडेट एक ही जगह</h1>
+      <p class="hero-subtitle">सरकारी नौकरी, एडमिट कार्ड, रिजल्ट और योजनाओं की जानकारी खोजें।</p>
+      <form class="search-form" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="नौकरी खोजें, रिजल्ट देखें, योजना खोजें..." aria-label="जानकारी खोजें">
+        <button type="submit" aria-label="खोजें">⌕ <span>खोजें</span></button>
       </form>
-      <div class="quick-tags" aria-label="Popular searches">
-        <span>Popular:</span>
-        <button type="button" class="tag" data-search="scholarship">Scholarships</button>
-        <button type="button" class="tag" data-search="jobs">Jobs</button>
-        <button type="button" class="tag" data-search="coding">Coding</button>
-        <button type="button" class="tag" data-search="digital">Digital services</button>
-      </div>
-      <div class="hero-stats">
-        <div><strong id="linkCount">18+</strong><span>curated links</span></div>
-        <div><strong>6</strong><span>topic collections</span></div>
-        <div><strong>100%</strong><span>free to browse</span></div>
+      <div class="quick-links">
+        <a href="#jobs"><span>💼</span> नई नौकरियाँ</a>
+        <a href="#results"><span>📊</span> रिजल्ट</a>
+        <a href="#admit"><span>🎫</span> एडमिट कार्ड</a>
+        <a href="#schemes"><span>🏛️</span> सरकारी योजनाएँ</a>
       </div>
     </section>
 
-    <section class="section explore-section" id="explore">
-      <div class="section-heading">
-        <div><div class="eyebrow">BROWSE THE DIRECTORY</div><h2>Explore by interest</h2></div>
-        <p>Choose a category or search for a specific resource.</p>
-      </div>
-      <div class="filters" id="filters" aria-label="Filter links by category">
-        <button class="filter active" data-category="all" aria-pressed="true">All links <span>18</span></button>
-        <button class="filter" data-category="government" aria-pressed="false">Government</button>
-        <button class="filter" data-category="education" aria-pressed="false">Education</button>
-        <button class="filter" data-category="careers" aria-pressed="false">Careers</button>
-        <button class="filter" data-category="technology" aria-pressed="false">Technology</button>
-        <button class="filter" data-category="everyday" aria-pressed="false">Everyday</button>
-        <button class="filter" data-category="safety" aria-pressed="false">Online safety</button>
-      </div>
-      <div class="results-meta"><span id="resultsLabel">Showing all resources</span><button id="clearSearch" class="clear-button" hidden>Clear search ×</button></div>
-      <div class="resource-grid" id="resourceGrid">
-        <article class="resource-card" data-category="government" data-search="india government national portal schemes public services">
-          <div class="card-top"><span class="resource-icon violet">⌂</span><span class="official-label">GOVERNMENT</span></div>
-          <h3>National Portal of India</h3><p>Official starting point for government information, services and schemes.</p>
-          <div class="card-bottom"><span class="domain">india.gov.in</span><a class="open-link" href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="Open National Portal of India">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="government" data-search="digilocker digital documents certificates government">
-          <div class="card-top"><span class="resource-icon blue">▣</span><span class="official-label">DIGITAL SERVICE</span></div>
-          <h3>DigiLocker</h3><p>Access and manage digital documents through India's official platform.</p>
-          <div class="card-bottom"><span class="domain">digilocker.gov.in</span><a class="open-link" href="https://www.digilocker.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="education" data-search="scholarship national scholarship portal students financial aid">
-          <div class="card-top"><span class="resource-icon orange">✦</span><span class="official-label">STUDENTS</span></div>
-          <h3>National Scholarship Portal</h3><p>Government scholarship information and application services for eligible students.</p>
-          <div class="card-bottom"><span class="domain">scholarships.gov.in</span><a class="open-link" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="careers" data-search="jobs national career service employment job seekers employers">
-          <div class="card-top"><span class="resource-icon green">↗</span><span class="official-label">CAREER</span></div>
-          <h3>National Career Service</h3><p>Explore employment services, career guidance and job-seeker resources.</p>
-          <div class="card-bottom"><span class="domain">ncs.gov.in</span><a class="open-link" href="https://www.ncs.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="education" data-search="swayam free online courses learning education">
-          <div class="card-top"><span class="resource-icon pink">◈</span><span class="official-label">LEARNING</span></div>
-          <h3>SWAYAM</h3><p>Online courses from Indian education institutions and course providers.</p>
-          <div class="card-bottom"><span class="domain">swayam.gov.in</span><a class="open-link" href="https://swayam.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="technology" data-search="coding web development documentation javascript html css mdn">
-          <div class="card-top"><span class="resource-icon blue">⌘</span><span class="official-label">DEVELOPERS</span></div>
-          <h3>MDN Web Docs</h3><p>Trusted documentation and guides for HTML, CSS, JavaScript and the web.</p>
-          <div class="card-bottom"><span class="domain">developer.mozilla.org</span><a class="open-link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="technology" data-search="github code projects repository collaboration">
-          <div class="card-top"><span class="resource-icon neutral">⌥</span><span class="official-label">CODE & PROJECTS</span></div>
-          <h3>GitHub</h3><p>Host code, collaborate on projects and build your developer portfolio.</p>
-          <div class="card-bottom"><span class="domain">github.com</span><a class="open-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="education" data-search="ncert textbooks books school education">
-          <div class="card-top"><span class="resource-icon orange">▤</span><span class="official-label">SCHOOL</span></div>
-          <h3>NCERT</h3><p>Official National Council of Educational Research and Training resources.</p>
-          <div class="card-bottom"><span class="domain">ncert.nic.in</span><a class="open-link" href="https://ncert.nic.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="government" data-search="government services india services portal applications certificates">
-          <div class="card-top"><span class="resource-icon violet">▦</span><span class="official-label">PUBLIC SERVICES</span></div>
-          <h3>National Government Services</h3><p>Search government services by topic and discover official service pages.</p>
-          <div class="card-bottom"><span class="domain">services.india.gov.in</span><a class="open-link" href="https://services.india.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="government" data-search="uidai aadhaar official update status">
-          <div class="card-top"><span class="resource-icon green">◎</span><span class="official-label">IDENTITY</span></div>
-          <h3>UIDAI / Aadhaar</h3><p>Official Aadhaar information and online service access.</p>
-          <div class="card-bottom"><span class="domain">uidai.gov.in</span><a class="open-link" href="https://uidai.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="government" data-search="passport seva passport application official india">
-          <div class="card-top"><span class="resource-icon blue">▣</span><span class="official-label">TRAVEL DOCUMENTS</span></div>
-          <h3>Passport Seva</h3><p>Passport information, application services and official updates.</p>
-          <div class="card-bottom"><span class="domain">passportindia.gov.in</span><a class="open-link" href="https://www.passportindia.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="careers" data-search="upsc civil services exam recruitment official">
-          <div class="card-top"><span class="resource-icon orange">✧</span><span class="official-label">EXAMS</span></div>
-          <h3>UPSC</h3><p>Official Union Public Service Commission notices and examination information.</p>
-          <div class="card-bottom"><span class="domain">upsc.gov.in</span><a class="open-link" href="https://upsc.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="careers" data-search="ssc staff selection commission recruitment exams">
-          <div class="card-top"><span class="resource-icon pink">✦</span><span class="official-label">RECRUITMENT</span></div>
-          <h3>Staff Selection Commission</h3><p>Official notices and examination resources for SSC recruitment.</p>
-          <div class="card-bottom"><span class="domain">ssc.gov.in</span><a class="open-link" href="https://ssc.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="everyday" data-search="maps directions locations google maps">
-          <div class="card-top"><span class="resource-icon green">⌖</span><span class="official-label">NAVIGATION</span></div>
-          <h3>Google Maps</h3><p>Find places, explore maps and plan routes.</p>
-          <div class="card-bottom"><span class="domain">maps.google.com</span><a class="open-link" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="everyday" data-search="translate language translation google translate">
-          <div class="card-top"><span class="resource-icon blue">文</span><span class="official-label">LANGUAGES</span></div>
-          <h3>Google Translate</h3><p>Translate text and explore language tools.</p>
-          <div class="card-bottom"><span class="domain">translate.google.com</span><a class="open-link" href="https://translate.google.com/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="safety" data-search="cyber crime report online fraud india official portal">
-          <div class="card-top"><span class="resource-icon pink">⚑</span><span class="official-label">ONLINE SAFETY</span></div>
-          <h3>National Cyber Crime Portal</h3><p>Official portal for cybercrime reporting and related guidance in India.</p>
-          <div class="card-bottom"><span class="domain">cybercrime.gov.in</span><a class="open-link" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="safety" data-search="cyber awareness security online safety cert-in">
-          <div class="card-top"><span class="resource-icon orange">⛨</span><span class="official-label">CYBER SECURITY</span></div>
-          <h3>CERT-In</h3><p>India's cyber security incident response team and security advisories.</p>
-          <div class="card-bottom"><span class="domain">cert-in.org.in</span><a class="open-link" href="https://www.cert-in.org.in/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-        <article class="resource-card" data-category="technology" data-search="google learning digital skills online courses">
-          <div class="card-top"><span class="resource-icon violet">◉</span><span class="official-label">DIGITAL SKILLS</span></div>
-          <h3>Google Skillshop</h3><p>Training and learning resources for Google's tools and platforms.</p>
-          <div class="card-bottom"><span class="domain">skillshop.withgoogle.com</span><a class="open-link" href="https://skillshop.withgoogle.com/" target="_blank" rel="noopener noreferrer">Open link <span>↗</span></a></div>
-        </article>
-      </div>
-      <div class="empty-state" id="emptyState" hidden><div class="empty-icon">⌕</div><h3>No links found</h3><p>Try another keyword or select a different category.</p><button class="secondary-button" id="resetFilters">Show all links</button></div>
+    <section class="notice-strip" aria-label="महत्वपूर्ण सूचना">
+      <span class="notice-icon">✦</span>
+      <div><strong>नवीनतम अपडेट पाने के लिए जुड़े रहें</strong><small>आवेदन करने से पहले संबंधित विभाग की आधिकारिक वेबसाइट पर विवरण जरूर जाँचें।</small></div>
+      <a href="#important">महत्वपूर्ण सूचना ↗</a>
     </section>
 
-    <section class="featured section" id="featured">
-      <div class="featured-copy"><div class="eyebrow">A SMARTER STARTING POINT</div><h2>Start with trusted sources.</h2><p>For government forms, exam notices, scholarships and jobs, always verify details on the official website before sharing personal information or making payments.</p><a href="https://www.india.gov.in/" class="featured-button" target="_blank" rel="noopener noreferrer">Visit India.gov.in <span>↗</span></a></div>
-      <div class="trust-visual" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="trust-core"><span>✓</span><small>TRUST FIRST</small></div><div class="orbit-node node-a">.gov.in</div><div class="orbit-node node-b">HTTPS</div><div class="orbit-node node-c">✓</div></div>
-    </section>
+    <div class="content-grid">
+      <section class="panel" id="latest">
+        <div class="panel-heading"><h2><span>🔔</span> नवीनतम अपडेट</h2><a href="#latest" class="view-all" data-show-all="latest">सभी देखें ↗</a></div>
+        <ul class="updates-list" id="latestList"></ul>
+      </section>
+      <section class="panel" id="jobs">
+        <div class="panel-heading"><h2><span>💼</span> नवीनतम नौकरियाँ</h2><a href="#jobs" class="view-all" data-show-all="jobs">सभी देखें ↗</a></div>
+        <ul class="updates-list" id="jobsList"></ul>
+      </section>
+      <section class="panel" id="results">
+        <div class="panel-heading"><h2><span>📊</span> परिणाम</h2><a href="#results" class="view-all" data-show-all="results">सभी देखें ↗</a></div>
+        <ul class="updates-list" id="resultsList"></ul>
+      </section>
+      <section class="panel" id="admit">
+        <div class="panel-heading"><h2><span>🎫</span> एडमिट कार्ड</h2><a href="#admit" class="view-all" data-show-all="admit">सभी देखें ↗</a></div>
+        <ul class="updates-list" id="admitList"></ul>
+      </section>
+      <section class="panel" id="admissions">
+        <div class="panel-heading"><h2><span>🎓</span> प्रवेश / एडमिशन</h2><a href="#admissions" class="view-all" data-show-all="admissions">सभी देखें ↗</a></div>
+        <ul class="updates-list" id="admissionsList"></ul>
+      </section>
+      <section class="panel" id="schemes">
+        <div class="panel-heading"><h2><span>🏛️</span> सरकारी योजनाएँ</h2><a href="#schemes" class="view-all" data-show-all="schemes">सभी देखें ↗</a></div>
+        <ul class="updates-list" id="schemesList"></ul>
+      </section>
+    </div>
 
-    <section class="about-section section" id="about">
-      <div class="about-icon">i</div><div><div class="eyebrow">ABOUT SKC INFOPOINT</div><h2>One place to begin your search.</h2><p>SKC InfoPoint is a curated directory, not a government website. Links open third-party websites in a new tab. Always check the destination URL and its terms before using a service.</p></div>
+    <section class="important-box" id="important">
+      <div class="important-icon">ⓘ</div>
+      <div><h2>महत्वपूर्ण सूचना</h2><p>SKC InfoPoint एक स्वतंत्र सूचना पोर्टल है, सरकारी वेबसाइट नहीं। यहाँ दिए गए लिंक जानकारी के लिए हैं। आवेदन, फीस जमा करने या निजी जानकारी देने से पहले आधिकारिक वेबसाइट पर सूचना की पुष्टि करें। नीचे के उदाहरण डेमो सामग्री हैं; इन्हें वास्तविक भर्ती या परिणाम की घोषणा न समझें।</p></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="brand" href="#home"><span class="brand-mark">SKC<span>.</span></span><span class="brand-name">InfoPoint</span></a>
-    <p>Useful resources, thoughtfully collected.</p>
-    <div class="footer-bottom"><span>© <span id="year"></span> SKC InfoPoint</span><a href="#home">Back to top ↑</a></div>
+  <footer class="footer">
+    <a class="footer-brand" href="./">SKC InfoPoint</a>
+    <p>सही जानकारी तक आसान पहुँच।</p>
+    <div class="footer-links"><a href="#important">अस्वीकरण</a><a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">National Portal of India</a><a href="https://www.ncs.gov.in/" target="_blank" rel="noopener noreferrer">National Career Service</a></div>
+    <small>© <span id="year"></span> SKC InfoPoint. सभी अधिकार सुरक्षित।</small>
   </footer>
-  <noscript><p class="noscript">Search and category filters require JavaScript. Direct links remain available below.</p></noscript>
+  <script src="script.js"></script>
 </body>
 </html>
