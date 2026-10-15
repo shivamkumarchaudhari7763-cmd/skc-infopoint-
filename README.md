@@ -24,3 +24,7 @@ The listed entries are example directory links to official websites, not claims 
 - WhatsApp contact: https://wa.me/917070035160
 - WhatsApp Channel: https://whatsapp.com/channel/0029Vb8xTfo7j6g7TTl4J431
 - Telegram: https://t.me/skcinfopoint
+
+## Latest update
+- Refreshed blue gradient design, rounded cards, hover effects and mobile spacing.
+- Includes `profile.png`, WhatsApp contact/channel, and Telegram links.
